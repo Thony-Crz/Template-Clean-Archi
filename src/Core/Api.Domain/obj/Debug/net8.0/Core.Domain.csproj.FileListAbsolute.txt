@@ -1,0 +1,11 @@
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\bin\Debug\net8.0\Core.Domain.deps.json
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\bin\Debug\net8.0\Core.Domain.dll
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\bin\Debug\net8.0\Core.Domain.pdb
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\Core.Domain.AssemblyInfoInputs.cache
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\Core.Domain.AssemblyInfo.cs
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\Core.Domain.csproj.CoreCompileInputs.cache
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\Core.Domain.dll
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\refint\Core.Domain.dll
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\Core.Domain.pdb
+C:\data\POC\Template-Clean-Archi\src\Core\Api.Domain\obj\Debug\net8.0\ref\Core.Domain.dll
