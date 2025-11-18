@@ -27,7 +27,7 @@ namespace Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Product> GetAsync(Guid productId)
+        public Task<Product?> GetAsync(Guid productId)
         {
             throw new NotImplementedException();
         }
