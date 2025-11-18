@@ -1,7 +1,7 @@
-﻿using Core.Application.UseCases;
-using Core.Application.UseCases.product;
-using Core.Domain.Entities;
-using Core.Domain.Interfaces;
+﻿using TemplateCleanArchi.Application.UseCases;
+using TemplateCleanArchi.Application.UseCases.product;
+using TemplateCleanArchi.Domain.Entities;
+using TemplateCleanArchi.Domain.Interfaces;
 using Moq;
 
 namespace Application.UnitTests.Products

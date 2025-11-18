@@ -2,43 +2,106 @@
 
 ## Description
 
-Ce projet est une application .NET 8.0 utilisant C# 12.0. Il est structurÈ en plusieurs couches, notamment l'infrastructure, le domaine et les tests. L'objectif principal de ce projet est de fournir une architecture modulaire et testable pour une application de gestion de [votre domaine].
+Ce template est une application .NET 8.0 utilisant C# 12.0. Il est structur√© en plusieurs couches, notamment l'infrastructure, le domaine et les tests. L'objectif principal de ce template est de fournir une architecture modulaire et testable pour une application de gestion utilisant l'architecture Clean Architecture.
+
+## Installation du Template
+
+Pour installer ce template localement depuis le d√©p√¥t:
+
+```bash
+dotnet new install .
+```
+
+Ou pour installer depuis NuGet (une fois publi√©):
+
+```bash
+dotnet new install CleanArchitecture.Template
+```
+
+## Utilisation du Template
+
+Pour cr√©er un nouveau projet √† partir de ce template:
+
+```bash
+dotnet new clean-arch -n MonProjet
+```
+
+Cela cr√©era un nouveau projet avec la structure suivante:
+- `MonProjet.Domain` - Contient les entit√©s du domaine et les interfaces
+- `MonProjet.Application` - Contient les cas d'utilisation et la logique m√©tier
+- `Infrastructure` - Contient les impl√©mentations des d√©p√¥ts et le contexte de la base de donn√©es
+- `WebApi` - API Web ASP.NET Core
+- `Application.UnitTests` - Tests unitaires
+
+Tous les namespaces seront automatiquement configur√©s avec le nom de votre projet (ex: `MonProjet.Domain.Entities`, `MonProjet.Application.UseCases`, etc.).
 
 ## Structure du Projet
 
-- **src/Infrastructure** : Contient les implÈmentations des dÈpÙts et le contexte de la base de donnÈes.
-  - `AppDbContext.cs` : Classe reprÈsentant le contexte de la base de donnÈes.
-  - `Repositories/[NomDuRepository].cs` : ImplÈmentation du dÈpÙt pour [votre entitÈ].
+- **src/TemplateCleanArchi/Domain** : Contient les entit√©s du domaine et les interfaces. Les entit√©s du domaine doivent √™tre pures, c'est-√†-dire qu'elles ne doivent pas avoir d'effets de bord et doivent √™tre d√©terministes.
+  - `Entities/Product.cs` : Exemple d'entit√© du domaine.
+  - `Interfaces/IProductRepository.cs` : Interface pour le d√©p√¥t de produits.
 
-- **src/Core** : Contient les entitÈs du domaine et les interfaces. Les entitÈs du domaine doivent Ítre pures, c'est-‡-dire qu'elles ne doivent pas avoir d'effets de bord et doivent Ítre dÈterministes.
-  - `Entities/[NomDeLEntitÈ].cs` : Classe reprÈsentant [votre entitÈ].
-  - `Interfaces/I[NomDuRepository].cs` : Interface pour le dÈpÙt de [votre entitÈ].
+- **src/TemplateCleanArchi/Application** : Contient les cas d'utilisation et la logique m√©tier.
+  - `UseCases/product/` : Gestionnaires pour les op√©rations sur les produits.
+  - `DTOs/` : Objets de transfert de donn√©es.
+  - `Exceptions/` : Exceptions personnalis√©es.
 
-- **src/Tests** : Contient les projets de tests unitaires et d'intÈgration.
-  - `[NomDuProjet].UnitTests` : Tests unitaires pour l'application.
-  - `[NomDuProjet].IntegrationTests` : Tests d'intÈgration pour l'application.
+- **src/Infrastructure** : Contient les impl√©mentations des d√©p√¥ts et le contexte de la base de donn√©es.
+  - `AppDbContext.cs` : Classe repr√©sentant le contexte de la base de donn√©es.
+  - `Repositories/ProductRepository.cs` : Impl√©mentation du d√©p√¥t pour les produits.
 
-## PrÈrequis
+- **WebApi** : API Web ASP.NET Core avec injection de d√©pendance configur√©e.
+
+- **src/Tests** : Contient les projets de tests unitaires.
+  - `Application.UnitTests` : Tests unitaires pour la couche application.
+
+## Pr√©requis
 
 - .NET 8.0 SDK
-- Visual Studio 2022
+- Visual Studio 2022 ou VS Code
 
-## Installation
+## Installation (pour d√©veloppement du template)
 
-1. Clonez le dÈpÙt :
+1. Clonez le d√©p√¥t :
 
-`git clone ...`
+```bash
+git clone https://github.com/Thony-Crz/Template-Clean-Archi.git
+```
 
-2. AccÈdez au rÈpertoire du projet
+2. Acc√©dez au r√©pertoire du projet
 
 3. Restaurez les packages NuGet :
 
-`dotnet restore`
+```bash
+dotnet restore
+```
 
-## Ce qu'il reste ‡ faire
+4. Compilez le projet :
 
-- Configurer l'injection de dÈpendance pour les services et les dÈpÙts.
+```bash
+dotnet build
+```
+
+## D√©sinstallation du Template
+
+Pour d√©sinstaller le template:
+
+```bash
+dotnet new uninstall CleanArchitecture.Template
+```
+
+Ou si install√© depuis un dossier local:
+
+```bash
+dotnet new uninstall /chemin/vers/le/template
+```
+
+## Ce qu'il reste √† faire
+
+- Configurer l'injection de d√©pendance pour les services et les d√©p√¥ts.
+- Impl√©menter les m√©thodes du repository.
+- Ajouter Entity Framework Core pour la persistance des donn√©es.
 
 ## Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de dÈtails.
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de d√©tails.

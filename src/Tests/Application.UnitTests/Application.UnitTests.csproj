@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Application\Application.csproj" />
-    <ProjectReference Include="..\..\Core\Domain\Domain.csproj" />
+    <ProjectReference Include="..\..\TemplateCleanArchi\Application\Application.csproj" />
+    <ProjectReference Include="..\..\TemplateCleanArchi\Domain\Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

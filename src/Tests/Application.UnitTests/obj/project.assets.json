@@ -1122,13 +1122,13 @@
     },
     "Application/1.0.0": {
       "type": "project",
-      "path": "../../Core/Application/Application.csproj",
-      "msbuildProject": "../../Core/Application/Application.csproj"
+      "path": "../../TemplateCleanArchi/Application/Application.csproj",
+      "msbuildProject": "../../TemplateCleanArchi/Application/Application.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "../../Core/Domain/Domain.csproj",
-      "msbuildProject": "../../Core/Domain/Domain.csproj"
+      "path": "../../TemplateCleanArchi/Domain/Domain.csproj",
+      "msbuildProject": "../../TemplateCleanArchi/Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1144,44 +1144,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\acr\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/runner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\data\\POC\\Template-Clean-Archi\\src\\Tests\\Application.UnitTests\\Application.UnitTests.csproj",
+      "projectUniqueName": "/home/runner/work/Template-Clean-Archi/Template-Clean-Archi/src/Tests/Application.UnitTests/Application.UnitTests.csproj",
       "projectName": "Application.UnitTests",
-      "projectPath": "C:\\data\\POC\\Template-Clean-Archi\\src\\Tests\\Application.UnitTests\\Application.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\acr\\.nuget\\packages\\",
-      "outputPath": "C:\\data\\POC\\Template-Clean-Archi\\src\\Tests\\Application.UnitTests\\obj\\",
+      "projectPath": "/home/runner/work/Template-Clean-Archi/Template-Clean-Archi/src/Tests/Application.UnitTests/Application.UnitTests.csproj",
+      "packagesPath": "/home/runner/.nuget/packages/",
+      "outputPath": "/home/runner/work/Template-Clean-Archi/Template-Clean-Archi/src/Tests/Application.UnitTests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\acr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/runner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\data\\nugget Tests": {},
-        "C:\\data\\nugget Tests\\Zeus": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\data\\POC\\Template-Clean-Archi\\src\\Core\\Application\\Application.csproj": {
-              "projectPath": "C:\\data\\POC\\Template-Clean-Archi\\src\\Core\\Application\\Application.csproj"
+            "/home/runner/work/Template-Clean-Archi/Template-Clean-Archi/src/TemplateCleanArchi/Application/Application.csproj": {
+              "projectPath": "/home/runner/work/Template-Clean-Archi/Template-Clean-Archi/src/TemplateCleanArchi/Application/Application.csproj"
             },
-            "C:\\data\\POC\\Template-Clean-Archi\\src\\Core\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\data\\POC\\Template-Clean-Archi\\src\\Core\\Domain\\Domain.csproj"
+            "/home/runner/work/Template-Clean-Archi/Template-Clean-Archi/src/TemplateCleanArchi/Domain/Domain.csproj": {
+              "projectPath": "/home/runner/work/Template-Clean-Archi/Template-Clean-Archi/src/TemplateCleanArchi/Domain/Domain.csproj"
             }
           }
         }
@@ -1196,7 +1187,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -1243,7 +1234,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

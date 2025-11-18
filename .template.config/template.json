@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Thony-Crz",
+  "classifications": [ "Web", "Clean Architecture", "API", "DDD" ],
+  "identity": "CleanArchitecture.Template",
+  "name": "Clean Architecture Template",
+  "shortName": "clean-arch",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "TemplateCleanArchi",
+  "preferNameDirectory": true
+}

@@ -1,11 +1,11 @@
-using Core.Domain.Interfaces;
+using TemplateCleanArchi.Domain.Interfaces;
 using Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Ajouter les services au conteneur.
 
-// Enregistrer les dépôts et services
+// Enregistrer les dï¿½pï¿½ts et services
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
