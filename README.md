@@ -42,7 +42,7 @@ Tous les namespaces seront automatiquement configurés avec le nom de votre proj
   - `Interfaces/IProductRepository.cs` : Interface pour le dépôt de produits.
 
 - **src/TemplateCleanArchi/Application** : Contient les cas d'utilisation et la logique métier.
-  - `UseCases/product/` : Gestionnaires pour les opérations sur les produits.
+  - `UseCases/product/` : Use Cases pour les opérations sur les produits (approche DDD avec pattern `...UseCase(...).Execute()`).
   - `DTOs/` : Objets de transfert de données.
   - `Exceptions/` : Exceptions personnalisées.
 
@@ -59,6 +59,25 @@ Tous les namespaces seront automatiquement configurés avec le nom de votre proj
 
 - .NET 8.0 SDK
 - Visual Studio 2022 ou VS Code
+
+## Approche Use Case (DDD)
+
+Ce template utilise une approche orientée cas d'utilisation (Use Case) plutôt que CQRS. Chaque action métier est représentée par un UseCase qui implémente le pattern `...UseCase(...).Execute()`.
+
+### Exemple
+
+```csharp
+// Créer un produit
+var createProductUseCase = new CreateProductUseCase(productRepository);
+var request = new CreateProductRequest("iPhone 15", 999.99m);
+var productId = await createProductUseCase.Execute(request);
+
+// Récupérer un produit
+var getProductUseCase = new GetProductUseCase(productRepository);
+var product = await getProductUseCase.Execute(productId);
+```
+
+Voir [UseCases/README.md](src/TemplateCleanArchi/Application/UseCases/README.md) pour plus de détails.
 
 ## Installation (pour développement du template)
 
