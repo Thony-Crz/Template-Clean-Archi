@@ -1,5 +1,5 @@
-﻿using Core.Domain.Entities;
-using Core.Domain.Interfaces;
+﻿using TemplateCleanArchi.Domain.Entities;
+using TemplateCleanArchi.Domain.Interfaces;
 
 namespace Infrastructure.Repositories
 {
