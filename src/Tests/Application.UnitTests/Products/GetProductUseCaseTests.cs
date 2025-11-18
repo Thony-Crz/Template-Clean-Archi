@@ -7,20 +7,20 @@ using Moq;
 namespace Application.UnitTests.Products
 {
     [TestFixture]
-    public class GetProductHandlerTests
+    public class GetProductUseCaseTests
     {
         private Mock<IProductRepository> _productRepositoryMock;
-        private GetProductHandler _handler;
+        private GetProductUseCase _useCase;
 
         [SetUp]
         public void SetUp()
         {
             _productRepositoryMock = new Mock<IProductRepository>();
-            _handler = new GetProductHandler(_productRepositoryMock.Object);
+            _useCase = new GetProductUseCase(_productRepositoryMock.Object);
         }
 
         [Test]
-        public async Task Handle_ShouldReturnProduct_WhenProductExists()
+        public async Task Execute_ShouldReturnProduct_WhenProductExists()
         {
             // Arrange
             var productId = Guid.NewGuid();
@@ -31,7 +31,7 @@ namespace Application.UnitTests.Products
                 .ReturnsAsync((Product?)product);
 
             // Act
-            var result = await _handler.Handle(productId);
+            var result = await _useCase.Execute(productId);
 
             // Assert
             Assert.That(result, Is.EqualTo(product));
@@ -39,7 +39,7 @@ namespace Application.UnitTests.Products
         }
 
         [Test]
-        public void Handle_ShouldThrowNotFoundException_WhenProductDoesNotExist()
+        public void Execute_ShouldThrowNotFoundException_WhenProductDoesNotExist()
         {
             // Arrange
             var productId = Guid.NewGuid();
@@ -49,7 +49,7 @@ namespace Application.UnitTests.Products
                 .ReturnsAsync((Product?)null);
 
             // Act & Assert
-            Assert.ThrowsAsync<NotFoundException>(() => _handler.Handle(productId));
+            Assert.ThrowsAsync<NotFoundException>(() => _useCase.Execute(productId));
             _productRepositoryMock.Verify(repo => repo.GetAsync(productId), Times.Once);
         }
     }

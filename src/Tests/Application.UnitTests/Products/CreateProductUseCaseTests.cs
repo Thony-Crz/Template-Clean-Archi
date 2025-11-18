@@ -1,4 +1,4 @@
-﻿using TemplateCleanArchi.Application.UseCases;
+﻿using TemplateCleanArchi.Application.DTOs;
 using TemplateCleanArchi.Application.UseCases.product;
 using TemplateCleanArchi.Domain.Entities;
 using TemplateCleanArchi.Domain.Interfaces;
@@ -7,24 +7,23 @@ using Moq;
 namespace Application.UnitTests.Products
 {
     [TestFixture]
-    public class CreateProductHandlerTests
+    public class CreateProductUseCaseTests
     {
         private Mock<IProductRepository> _productRepositoryMock;
-        private CreateProductHandler _handler;
+        private CreateProductUseCase _useCase;
 
         [SetUp]
         public void SetUp()
         {
             _productRepositoryMock = new Mock<IProductRepository>();
-            _handler = new CreateProductHandler(_productRepositoryMock.Object);
+            _useCase = new CreateProductUseCase(_productRepositoryMock.Object);
         }
 
         [Test]
-        public async Task Handle_ShouldAddProductAndReturnId()
+        public async Task Execute_ShouldAddProductAndReturnId()
         {
             // Arrange
-            var productName = "Test Product";
-            var productPrice = 100m;
+            var request = new CreateProductRequest("Test Product", 100m);
             var productId = Guid.NewGuid();
 
             _productRepositoryMock
@@ -33,7 +32,7 @@ namespace Application.UnitTests.Products
                 .Returns(Task.CompletedTask);
 
             // Act
-            var result = await _handler.Handle(productName, productPrice);
+            var result = await _useCase.Execute(request);
 
             // Assert
             Assert.That(result, Is.EqualTo(productId));
