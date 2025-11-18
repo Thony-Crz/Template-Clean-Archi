@@ -52,8 +52,15 @@ Tous les namespaces seront automatiquement configurés avec le nom de votre proj
 
 - **WebApi** : API Web ASP.NET Core avec injection de dépendance configurée.
 
-- **src/Tests** : Contient les projets de tests unitaires.
-  - `Application.UnitTests` : Tests unitaires pour la couche application.
+- **src/Tests** : Contient les projets de tests.
+  - `Application.UnitTests` : Tests unitaires pour la couche application avec mocks.
+  - `Application.IntegrationTests` : Tests d'intégration pour vérifier l'interaction entre les composants.
+
+## Documentation
+
+- **[Domain-Driven Design (DDD)](docs/DDD.md)** : Guide complet sur l'approche DDD utilisée dans ce template
+- **[Test-Driven Development (TDD)](docs/TDD.md)** : Guide pratique du TDD avec exemples concrets
+- **[Use Cases](src/TemplateCleanArchi/Application/UseCases/README.md)** : Documentation détaillée sur le pattern UseCase
 
 ## Prérequis
 
@@ -79,6 +86,10 @@ var product = await getProductUseCase.Execute(productId);
 
 Voir [UseCases/README.md](src/TemplateCleanArchi/Application/UseCases/README.md) pour plus de détails.
 
+Pour une compréhension approfondie de l'approche DDD et TDD, consultez :
+- [Guide Domain-Driven Design](docs/DDD.md)
+- [Guide Test-Driven Development](docs/TDD.md)
+
 ## Installation (pour développement du template)
 
 1. Clonez le dépôt :
@@ -100,6 +111,30 @@ dotnet restore
 ```bash
 dotnet build
 ```
+
+## Tests
+
+Le projet inclut des exemples de tests unitaires et d'intégration.
+
+### Exécuter tous les tests
+
+```bash
+dotnet test
+```
+
+### Exécuter uniquement les tests unitaires
+
+```bash
+dotnet test src/Tests/Application.UnitTests/
+```
+
+### Exécuter uniquement les tests d'intégration
+
+```bash
+dotnet test src/Tests/Application.IntegrationTests/
+```
+
+Pour en savoir plus sur l'approche TDD utilisée, consultez le [Guide TDD](docs/TDD.md).
 
 ## Désinstallation du Template
 
